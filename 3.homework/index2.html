@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>请输入利润金额：</th>
+				<td><input type="number" name="px" id="profit"/></td>
+			</tr>
+		</table>
+		
+		<button onclick="my()">计算奖金<button>
+		<script>
+			
+			function my(){
+				
+				var p=document.getElementById("profit").value;
+				
+				var bonus;
+				
+				if(p<100000)
+				{
+					bonus=p*0.1;
+					document.write("奖金为："+bonus);
+				}
+				else if(p>=100000&&p<200000)
+				{
+					bonus=(p-100000)*0.075+10000;
+					document.write("奖金为："+bonus);
+				}
+				
+				else if(p>=200000&&p<400000)
+				{
+					bonus=(p-200000)*0.05+17500;
+					document.write("奖金为："+bonus);
+				}
+				
+				else if(p>=400000&&p<600000)
+				{
+					bonus=(p-400000)*0.03+27500;
+					document.write("奖金为："+bonus);
+				}
+				
+				else if(p>=600000&&p<1000000)
+				{
+					bonus=(p-600000)*0.015+33500;
+					document.write("奖金为："+bonus);
+				}
+				
+				else if(p>=1000000)
+				{
+					bonus=(p-1000000)*0.01+39500;
+					document.write("奖金为："+bonus);
+				}
+					
+			}
+			
+		</script>
+		
+	</body>
+<html>
